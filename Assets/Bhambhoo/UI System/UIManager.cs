@@ -1,4 +1,5 @@
-﻿using DG.Tweening;
+﻿// TEMPORARY FIX: DOTween disabled - animations won't work until DOTween is installed from Asset Store
+// using DG.Tweening;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -68,7 +69,7 @@ namespace Bhambhoo
             SwitchMainMenuTo(MainMenuScreens[index], null);
         }
 
-        public void SwitchMainMenuTo(MainMenuScreen newScreen, TweenCallback OnFadeOutComplete)
+        public void SwitchMainMenuTo(MainMenuScreen newScreen, Action OnFadeOutComplete)
         {
             CurrentScreen.SwitchTo(newScreen, OnFadeOutComplete);
         }
