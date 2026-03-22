@@ -376,8 +376,8 @@ namespace com.bhambhoo.fairludo
             Debug.Log($"Final Score: {winner.inventory.totalScore}");
             Debug.Log($"Ligands: {winner.inventory.ligandsCollected}, Correct Answers: {winner.inventory.correctAnswers}");
 
-            // Play win sound
-            SanUtils.PlaySound(Constants.Instance.sfxWin);
+            // Play win sound - TODO: Add when Constants.sfxWin is available
+            // SanUtils.PlaySound(Constants.Instance.sfxWin);
 
             // Show win screen UI
             // TODO: UIManager.Instance.ShowWinScreen(winner);

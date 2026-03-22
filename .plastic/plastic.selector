@@ -1,0 +1,4 @@
+repository "Setup Guide In-Editor Tutorial/Fair Ludo@18968403924044@cloud"
+  path "/"
+    br "/main"
+    co "/main"

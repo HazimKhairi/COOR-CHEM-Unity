@@ -66,11 +66,11 @@ namespace com.bhambhoo.fairludo
             // Show collection UI popup
             ShowLigandCollectedPopup(player, ligand);
 
-            // Network sync (if multiplayer)
-            if (NetworkManager.Instance != null)
-            {
-                // NetworkManager.Instance.SyncLigandCollection(player.playerIndex, ligand.ligandID);
-            }
+            // Network sync (if multiplayer) - TODO: Implement when NetworkManager is ready
+            // if (NetworkManager.Instance != null)
+            // {
+            //     NetworkManager.Instance.SyncLigandCollection(player.playerIndex, ligand.ligandID);
+            // }
         }
 
         /// <summary>

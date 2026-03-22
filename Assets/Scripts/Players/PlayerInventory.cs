@@ -57,11 +57,11 @@ namespace com.bhambhoo.fairludo
 
             Debug.Log($"Player {owner.playerIndex} collected {ligand.ligandName} (+{points} pts)");
 
-            // Update UI
-            if (UIManager.Instance != null)
-            {
-                // UIManager.Instance.UpdatePlayerInventory(owner.playerIndex);
-            }
+            // Update UI - TODO: Implement when UIManager integration is ready
+            // if (UIManager.Instance != null)
+            // {
+            //     UIManager.Instance.UpdatePlayerInventory(owner.playerIndex);
+            // }
         }
 
         /// <summary>
