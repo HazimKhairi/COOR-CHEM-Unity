@@ -258,7 +258,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: '            LUDO'
+  m_Text: '     CHEM-QUEST'
 --- !u!225 &4515851960765873451
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -348,7 +348,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: FAIR
+  m_Text: COMPLEX
 --- !u!1 &4515851961835408016
 GameObject:
   m_ObjectHideFlags: 0
@@ -425,7 +425,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: '          I'
+  m_Text: ''
 --- !u!1001 &6293387669927284115
 PrefabInstance:
   m_ObjectHideFlags: 0
