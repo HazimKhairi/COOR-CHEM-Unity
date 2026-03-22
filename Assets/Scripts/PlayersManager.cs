@@ -121,6 +121,10 @@ namespace com.bhambhoo.fairludo
         public byte playerIndex = 1;
         public string name = "Sanjay";
         public PlayerToken[] playerTokens = new PlayerToken[4];
+
+        // COOR-CHEM: Player inventory for ligands and scores
+        public PlayerInventory inventory;
+
         public GameObject turnHighlighter
         {
             get
@@ -145,6 +149,9 @@ namespace com.bhambhoo.fairludo
             if (displayName == "")
                 displayName = Constants.Instance.BotNames[playerIndex - 1];
             name = displayName;
+
+            // COOR-CHEM: Initialize inventory
+            inventory = new PlayerInventory(this);
 
             int i = 0;
             foreach (Transform oneBase in Constants.Instance.GetBases(playerIndex))

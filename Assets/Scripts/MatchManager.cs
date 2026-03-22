@@ -342,5 +342,45 @@ namespace com.bhambhoo.fairludo
                     else return 3;
             }
         }
+
+        // COOR-CHEM: Check win condition based on score
+        public void CheckWinCondition(Player player)
+        {
+            if (player == null) return;
+
+            // Check if player reached home with all tokens
+            int tokensAtHome = 0;
+            foreach (PlayerToken token in player.playerTokens)
+            {
+                if (token.localWaypointIndex == Constants.LastWaypointIndex)
+                    tokensAtHome++;
+            }
+
+            // Win if all tokens reached home OR highest score
+            if (tokensAtHome == 4)
+            {
+                Debug.Log($"🏆 {player.name} WON! All tokens home + score: {player.inventory.totalScore}");
+                OnPlayerWon(player);
+            }
+        }
+
+        /// <summary>
+        /// Handle player winning
+        /// </summary>
+        private void OnPlayerWon(Player winner)
+        {
+            MatchRunning = false;
+            InputAllowed = false;
+
+            Debug.Log($"🎉 GAME OVER! Winner: {winner.name}");
+            Debug.Log($"Final Score: {winner.inventory.totalScore}");
+            Debug.Log($"Ligands: {winner.inventory.ligandsCollected}, Correct Answers: {winner.inventory.correctAnswers}");
+
+            // Play win sound
+            SanUtils.PlaySound(Constants.Instance.sfxWin);
+
+            // Show win screen UI
+            // TODO: UIManager.Instance.ShowWinScreen(winner);
+        }
     }
 }

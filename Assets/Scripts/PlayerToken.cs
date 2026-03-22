@@ -89,6 +89,18 @@ namespace com.bhambhoo.fairludo
 
             yield return new WaitForSeconds(Constants.delayAfterTokenMoveComplete);
 
+            // COOR-CHEM: Check for BoardTile component at current waypoint
+            Transform waypointTransform = Constants.Instance.GetWaypoint(player.playerIndex, localWaypointIndex);
+            if (waypointTransform != null)
+            {
+                BoardTile tile = waypointTransform.GetComponent<BoardTile>();
+                if (tile != null)
+                {
+                    tile.OnPlayerLanded(player);
+                    yield return new WaitForSeconds(0.5f);
+                }
+            }
+
             // Check if we've reached endpoint, or we've killed another token
             if (localWaypointIndex == Constants.LastWaypointIndex)
             {
