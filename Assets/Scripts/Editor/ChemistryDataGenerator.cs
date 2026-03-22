@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEditor;
 using System.IO;
+using com.bhambhoo.fairludo;
 
 /// <summary>
 /// COOR-CHEM: Auto-generate all chemistry data assets (41 total)
